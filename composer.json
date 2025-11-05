@@ -54,11 +54,5 @@
                 "Profiler": "SwooleProfiler\\Laravel\\Facades\\Profiler"
             }
         }
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./swoole"
-        }
-    ]
+    }
 }
