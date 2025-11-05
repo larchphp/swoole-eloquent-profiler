@@ -1,0 +1,57 @@
+{
+    "name": "swoole-eloquent/profiler",
+    "description": "Performance profiler for swoole-eloquent library with coroutine-aware metrics tracking",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "swoole",
+        "eloquent",
+        "profiler",
+        "performance",
+        "coroutine",
+        "database",
+        "monitoring"
+    ],
+    "authors": [
+        {
+            "name": "Swoole Eloquent Contributors"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-swoole": ">=5.0",
+        "illuminate/database": "^10.0|^11.0",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.6",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "SwooleProfiler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwooleProfiler\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SwooleProfiler\\Laravel\\ProfilerServiceProvider"
+            ],
+            "aliases": {
+                "Profiler": "SwooleProfiler\\Laravel\\Facades\\Profiler"
+            }
+        }
+    }
+}
